@@ -1,0 +1,30 @@
+.side-bar {
+  width: var(--sidebar-width);
+  height: 100%;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: calc((100vw - (var(--sidebar-width) + var(--content-width))) / 2);
+
+  .bio {
+    margin: 30px 0;
+
+    h1,
+    h2,
+    h3 {
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.blog-card-container {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .blog-date {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+  }
+
+  .blog-title {
+    font-size: 3em;
+    margin: 15px 0;
+    font-weight: 700;
+  }
+
+  .blog-description {
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+
+  .blog-read-now {
+    font-size: 1.2em;
+    color: var(--button-color);
+    transition: opacity 0.8s ease-out;
+    margin-top: 20px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

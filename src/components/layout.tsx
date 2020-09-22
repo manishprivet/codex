@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/layout.scss";
 import Particles, { IParticlesParams } from "react-tsparticles";
 
@@ -13,6 +13,9 @@ interface Props {
 
 const Layout = ({ children, home }: Props) => {
   const ref = useRef<Container>(null);
+  const [particles, setParticles] = useState(
+    tsParticlesConfig as IParticlesParams
+  );
 
   const changeParticleColor = (color: string) => {
     const container = ref.current;
@@ -20,13 +23,19 @@ const Layout = ({ children, home }: Props) => {
     container?.refresh();
   };
 
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const particlesColor = getComputedStyle(document.body);
+      ref.current?.options.particles.color.load({
+        value: particlesColor.getPropertyValue("--text-color"),
+      });
+      ref.current?.refresh();
+    }
+  }, []);
+
   return (
     <>
-      <Particles
-        container={ref}
-        className="particles"
-        options={tsParticlesConfig as IParticlesParams}
-      />
+      <Particles container={ref} className="particles" options={particles} />
       <div className="main-container">
         <Sidebar
           changeParticlesColor={changeParticleColor}

@@ -30,7 +30,7 @@ export default (props: Props) => {
         // Number of Lines in code
         const lines = tokens.length;
         // Height of Codeblock according to Lines
-        const height = `calc(2em + (${lines} * var(--token-line-height)) - 15px)`;
+        const height = `calc(2em + (${lines} * var(--token-line-height)) - 10px)`;
 
         return (
           <Scrollbars
@@ -50,6 +50,9 @@ export default (props: Props) => {
                   marginRight: "-16px",
                   marginBottom: "-16px",
                   transition: "none",
+                  padding: "1em",
+                  borderRadius: "0.3em",
+                  overflowY: "hidden",
                 }}
               />
             )}

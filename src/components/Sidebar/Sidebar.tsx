@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.scss";
+import "../../styles/sidebar.scss";
 import ProfilePic from "./ProfilePicture/ProfilePicture";
 import { Link } from "gatsby";
 import SocialLink, { SocialLinksProps } from "./Social/SocialLink";

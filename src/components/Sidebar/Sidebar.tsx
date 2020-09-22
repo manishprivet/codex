@@ -4,6 +4,7 @@ import ProfilePic from "./ProfilePicture/ProfilePicture";
 import { Link } from "gatsby";
 import SocialLink, { SocialLinksProps } from "./Social/SocialLink";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
 
 const links: SocialLinksProps[] = [
   { type: "website", link: "https://manish.codes" },
@@ -14,7 +15,12 @@ const links: SocialLinksProps[] = [
   { type: "facebook", link: "https://facebook.com/manishprivet" },
 ];
 
-const Sidebar = ({ home }: { home: boolean }) => {
+interface Props {
+  home: boolean;
+  changeParticlesColor: (v: string) => void;
+}
+
+const Sidebar = ({ home, changeParticlesColor }: Props) => {
   return (
     <header className="side-bar">
       <ProfilePic />
@@ -41,6 +47,7 @@ const Sidebar = ({ home }: { home: boolean }) => {
             <SocialLink key={link.type} {...link} />
           ))}
         </div>
+        <ThemeSwitcher changeParticlesColor={changeParticlesColor} />
       </div>
     </header>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import "./BlogCard.scss";
+import "../../styles/blog-card.scss";
 import { Link } from "gatsby";
 
 interface Props {

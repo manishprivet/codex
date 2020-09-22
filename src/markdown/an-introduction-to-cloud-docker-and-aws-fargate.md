@@ -1,7 +1,11 @@
 ---
 title: "An introduction to Cloud, Docker and AWS Fargate"
-date: "2017-08-10"
+date: "2020-08-20"
+description: "Cloud technology provides us with Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). Whether you’re a system admin and server administrator, who wants to manage his/her own barebones server or an awesome developer who just wants to write the code and deploy it to the world with every push, the cloud has you covered."
+ogImage: "https://ik.imagekit.io/codex/cloud_fWYl1I_glm.png?tr=w-1200,h-630,fo-auto"
 ---
+
+![Cloud](https://ik.imagekit.io/codex/cloud_fWYl1I_glm.png?tr=w-1200,h-630,fo-auto)
 
 Technology is at pace with a rate that’s faster than ever. You take a break for one month, and boom, ten new tools, and 100 new frameworks are currently in trend you have no idea about. But there’s one thing that’s required for any tool or language or framework to work or deployed is the underlying hardware. Most of us can’t afford the hardware to set up for small startups. That’s the problem that cloud solves.
 The below section is an introduction about cloud and serverless functions, so if you know about them, you can skip that.

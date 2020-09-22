@@ -4,9 +4,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import Layout from "../components/layout";
 import { BlogDataQuery } from "../../graphql-types";
-import { Helmet } from "react-helmet";
 import SEO from "../components/seo";
-import "./blog-post.scss";
+import BlogSEO from "./blog-seo";
+import "../styles/blog-post.scss";
 // import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import Components from "./MarkdownComponents";
 import { PropOptions } from "@deckdeckgo/highlight-code/dist/types/stencil-public-runtime";
@@ -24,22 +24,7 @@ export default ({ data }: { data: BlogDataQuery }) => {
   return (
     <Layout>
       <SEO title={post?.frontmatter?.title || `Manish's Blog`} />
-      <Helmet
-        meta={[
-          {
-            name: `description`,
-            content: post?.excerpt || "",
-          },
-          {
-            property: `og:title`,
-            content: post?.frontmatter?.title || "",
-          },
-          {
-            property: `og:description`,
-            content: post?.excerpt || "",
-          },
-        ]}
-      />
+      <BlogSEO data={data} />
       <div className="blog-post">
         <h1 className="blog-title">{post?.frontmatter?.title}</h1>
         <div className="blog-content">
@@ -58,6 +43,9 @@ export const query = graphql`
       body
       frontmatter {
         title
+        ogImage
+        date
+        description
       }
       excerpt
     }

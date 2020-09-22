@@ -1,8 +1,13 @@
 ---
 title: "Web Server Deployment Using Nginx and Docker"
-date: "2020-08-18"
-description: "A guide to deploy a server quickly on a Virtual Machine using Nginx, Docker and Docker-Compose, along with HTTPS using Certbot"
+date: "2020-07-18"
+description: "Want to quickly deploy a server on a virtual machine, but also want the flexibility of Docker and it's CI/CD Benefits? This is a guide to deploy a server quickly on a Virtual Machine using Nginx, Docker and Docker-Compose, along with HTTPS using Certbot, all while making it eligible to extend the configuration with CI/CD"
+ogImage: "https://ik.imagekit.io/codex/docker_nginx_XcQ4X_LW9b.png?tr=w-1200,h-630,fo-auto"
 ---
+
+![Post Image](https://ik.imagekit.io/codex/docker_nginx_XcQ4X_LW9b.png?tr=w-1200,h-630,fo-auto)
+
+Before we start, there are definitely some prerequisites regarding this.
 
 ### Prerequisites
 
@@ -90,7 +95,7 @@ Login to Docker Hub on your server
 docker --login username <USERNAME> # Replace <USERNAME> with your Docker Hub username
 ```
 
-### Make the `docker-compose.yml` file
+### Make the docker-compose.yml file
 
 ```bash
 cd ~

@@ -8,6 +8,8 @@ html {
   --sidebar-width: 300px;
   --content-width: 750px;
   --deckgo-highlight-code-scrol: scroll;
+  --transition-effect: all 0.4s;
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: 1100px) {
     --sidebar-width: 250px;
@@ -28,6 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: var(--transition-effect);
 }
 
 code {
@@ -44,10 +47,6 @@ a {
   box-sizing: border-box;
 }
 
-a {
-  transition: 0.4s ease-out;
-}
-
 h1,
 h2,
 h3,
@@ -55,6 +54,10 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+p {
+  transition: var(--transition-effect);
 }
 
 .main-container {
@@ -83,6 +86,7 @@ h6 {
       width: 100%;
       z-index: -1;
       background-color: var(--background-color);
+      transition: var(--transition-effect);
       opacity: 0.5;
       padding: 40px;
       top: 0;
@@ -104,6 +108,7 @@ h6 {
 .particles {
   position: fixed;
   background-color: var(--background-color);
+  transition: var(--transition-effect);
   top: 0;
   bottom: 0;
   left: 0;

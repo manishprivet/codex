@@ -8,6 +8,9 @@ interface Props {
   children: React.ReactNode;
 }
 
+const convertToSlug = (s: string | undefined) =>
+  (s || "").toLowerCase().replace(/\s/g, "-");
+
 const LinkButton = ({ id, scale }: { id: string; scale?: number }) => (
   <a className="heading-link-button" href={`#${id}`}>
     <Link
@@ -18,7 +21,7 @@ const LinkButton = ({ id, scale }: { id: string; scale?: number }) => (
 );
 
 const h1 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h1 id={id} {...props}>
       <LinkButton id={id} />
@@ -28,7 +31,7 @@ const h1 = ({ children, ...props }: Props) => {
 };
 
 const h2 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h2 id={id} {...props}>
       <LinkButton scale={0.95} id={id} />
@@ -37,7 +40,7 @@ const h2 = ({ children, ...props }: Props) => {
   );
 };
 const h3 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h3 id={id} {...props}>
       <LinkButton scale={0.8} id={id} />
@@ -46,7 +49,7 @@ const h3 = ({ children, ...props }: Props) => {
   );
 };
 const h4 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h4 id={id} {...props}>
       <LinkButton scale={0.75} id={id} />
@@ -55,7 +58,7 @@ const h4 = ({ children, ...props }: Props) => {
   );
 };
 const h5 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h5 id={id} {...props}>
       <LinkButton scale={0.7} id={id} />
@@ -64,7 +67,7 @@ const h5 = ({ children, ...props }: Props) => {
   );
 };
 const h6 = ({ children, ...props }: Props) => {
-  const id = children?.toString().replace(" ", "-") || "";
+  const id = convertToSlug(children?.toString());
   return (
     <h6 id={id} {...props}>
       <LinkButton scale={0.6} id={id} />

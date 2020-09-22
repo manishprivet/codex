@@ -2,19 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import Layout from "../components/layout";
 import { BlogDataQuery } from "../../graphql-types";
+
+import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogSEO from "./blog-seo";
-import "../styles/blog-post.scss";
-// import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import Components from "./MarkdownComponents";
-import { PropOptions } from "@deckdeckgo/highlight-code/dist/types/stencil-public-runtime";
-import "../styles/prism.css";
 
-// deckDeckGoHighlightElement();
+import "../styles/blog-post.scss";
 
-const inlineCode = (props: PropOptions) => (
+const inlineCode = (props: Record<string, unknown>) => (
   <code className="inline-code" {...props} />
 );
 

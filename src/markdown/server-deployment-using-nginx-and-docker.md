@@ -1,6 +1,7 @@
 ---
 title: "Web Server Deployment Using Nginx and Docker"
 date: "2020-08-18"
+description: "A guide to deploy a server quickly on a Virtual Machine using Nginx, Docker and Docker-Compose, along with HTTPS using Certbot"
 ---
 
 ### Prerequisites
@@ -150,28 +151,22 @@ events {
 }
 
 http {
-
   client_max_body_size 10M;
-
   server {
-
     client_max_body_size 10M;
+
     server_name subdomain.domain.com; # Domain name for the server
 
     # Pass all /api calls to backend
 
     location /api {
-
       client_max_body_size 10M;
       proxy_pass http://localhost:9000;
-
     }
 
     location / {
-
       client_max_body_size 10M;
       proxy_pass http://localhost:8000;
-
     }
   }
 }

@@ -37,19 +37,3 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 };
-
-exports.default = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        fileName: `./gatsby-graphql.ts`,
-        documentPaths: [
-          "./src/**/*.{ts,tsx}",
-          "./node_modules/gatsby-*/**/*.js",
-          "./gatsby-node.ts",
-        ],
-      },
-    },
-  ],
-};

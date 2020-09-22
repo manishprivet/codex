@@ -23,11 +23,28 @@
   .blog-read-now {
     font-size: 1.2em;
     color: var(--button-color);
-    transition: opacity 0.8s ease-out;
     margin-top: 20px;
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .blog-title {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    .blog-description {
+      margin: 10px 0;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .blog-title {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
   }
 }

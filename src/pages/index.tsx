@@ -19,7 +19,7 @@ const IndexPage = ({ data }: Props) => {
           key={node.id}
           date={node.frontmatter?.date}
           link={node.fields?.slug}
-          description={node.excerpt}
+          description={node.frontmatter?.description || node.excerpt}
           title={node.frontmatter?.title}
         />
       ))}
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
           frontmatter {
             date
             title
+            description
           }
           fields {
             slug

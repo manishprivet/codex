@@ -8,6 +8,11 @@ html {
   --sidebar-width: 300px;
   --content-width: 750px;
   --deckgo-highlight-code-scrol: scroll;
+
+  @media only screen and (max-width: 1100px) {
+    --sidebar-width: 250px;
+    --content-width: 600px;
+  }
 }
 
 body,
@@ -37,6 +42,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  transition: 0.4s ease-out;
 }
 
 h1,
@@ -78,6 +87,16 @@ h6 {
       padding: 40px;
       top: 0;
       left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    flex-flow: column;
+    --content-width: 100%;
+    --sidebar-width: 100%;
+
+    .content {
+      transform: none;
     }
   }
 }

@@ -13,32 +13,28 @@ interface Props {
 }
 
 export default (props: Props) => {
+  // classname of Component
   const className = props.children.props.className || "";
+  // Language Matches in class
   const matches = className.match(/language-(?<lang>.*)/);
+  // Get language from classname
+  const language = (matches && matches.groups && matches.groups.lang
+    ? matches.groups.lang
+    : "") as Language;
+  // Actual Code
+  const code = props.children.props.children?.toString() || "";
+
   return (
-    <Highlight
-      {...defaultProps}
-      theme={theme}
-      code={props.children.props.children?.toString() || ""}
-      language={
-        (matches && matches.groups && matches.groups.lang
-          ? matches.groups.lang
-          : "") as Language
-      }
-    >
+    <Highlight {...defaultProps} theme={theme} code={code} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
-        const emptyLines =
-          tokens.filter(token => token.length === 1 && token[0].content === "")
-            .length - 1;
-        const validLines = tokens.length - emptyLines;
+        // Number of Lines in code
+        const lines = tokens.length;
+        // Height of Codeblock according to Lines
+        const height = `calc(2em + (${lines} * var(--token-line-height)) - 15px)`;
+
         return (
           <Scrollbars
-            style={{
-              height: `calc(2em + ${validLines * 29.6}px - 10px + ${
-                (emptyLines - 1) * 5
-              }px)`,
-              borderRadius: "0.3em",
-            }}
+            style={{ height, borderRadius: "0.3em" }}
             renderView={props => (
               <pre
                 className={className}
@@ -51,8 +47,9 @@ export default (props: Props) => {
                   bottom: 0,
                   right: 0,
                   overflow: "scroll",
-                  marginRight: "-15px",
-                  marginBottom: "-15px",
+                  marginRight: "-16px",
+                  marginBottom: "-16px",
+                  transition: "none",
                 }}
               />
             )}
@@ -70,6 +67,7 @@ export default (props: Props) => {
             autoHide
             autoHideTimeout={1000}
             autoHideDuration={200}
+            universal
           >
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>

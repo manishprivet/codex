@@ -7,7 +7,7 @@
   left: calc((100vw - (var(--sidebar-width) + var(--content-width))) / 2);
 
   .bio {
-    margin: 30px 0;
+    margin: 15px 0 10px 0;
 
     h1,
     h2,
@@ -26,6 +26,11 @@
     h3 {
       font-size: 1rem;
     }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
   }
 
   .nav-container {
@@ -36,6 +41,7 @@
       font-size: 1.3em;
       margin: 10px 0;
       transition: var(--transition-effect);
+      width: fit-content;
 
       &:hover {
         color: var(--button-color);
@@ -50,7 +56,7 @@
 
     .social-title {
       font-size: 1.2em;
-      margin: 20px 0;
+      margin: 10px 0;
     }
 
     .social {

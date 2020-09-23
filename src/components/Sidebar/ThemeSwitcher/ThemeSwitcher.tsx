@@ -53,11 +53,11 @@ const THEMES: Theme[] = [
   },
 ];
 
-export default ({
-  changeParticlesColor,
-}: {
+interface Props {
   changeParticlesColor: (s: string) => void;
-}) => {
+}
+
+export default ({ changeParticlesColor }: Props) => {
   const changeTheme = (index: number) => {
     const {
       background,

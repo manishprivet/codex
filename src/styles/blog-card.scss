@@ -23,6 +23,7 @@
   .blog-read-now {
     font-size: 1.2em;
     color: var(--button-color);
+    transition: var(--transition-effect);
 
     &:hover {
       opacity: 0.7;

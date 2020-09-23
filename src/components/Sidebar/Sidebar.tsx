@@ -28,6 +28,10 @@ const Sidebar = ({ home, changeParticlesColor }: Props) => {
         <h1>Hi!</h1>
         <h2>I am Manish</h2>
         <h3>And this is my blog</h3>
+        <p>
+          Here I share every exciting thing I learn, my experiences and some of
+          my awesome projects as well.
+        </p>
       </div>
       <nav className="nav-container">
         {!home && <Link to="/">Home</Link>}

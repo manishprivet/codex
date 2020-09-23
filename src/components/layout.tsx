@@ -27,7 +27,7 @@ const Layout = ({ children, home }: Props) => {
     if (typeof window !== undefined) {
       const particlesColor = getComputedStyle(document.body);
       ref.current?.options.particles.color.load({
-        value: particlesColor.getPropertyValue("--text-color"),
+        value: particlesColor.getPropertyValue("--text-color").trim(),
       });
       ref.current?.refresh();
     }

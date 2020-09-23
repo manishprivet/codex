@@ -8,6 +8,20 @@
   }
 }
 
+.copy-button {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transform: translateY(20px);
+  padding: 7px 15px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  outline: none;
+}
+
 .blog-content {
   color: var(--text-color);
   margin-top: 20px;
@@ -26,10 +40,6 @@
       right: -2rem;
       width: 10px;
       height: 5px;
-    }
-
-    &:last-child {
-      display: none;
     }
 
     .token {

@@ -45,7 +45,7 @@ const Sidebar = ({ home, changeParticlesColor }: Props) => {
         </a>
       </nav>
       <div className="social-container">
-        <h2 className="social-title">Reach Me Out</h2>
+        <h2 className="social-title">Contact Me</h2>
         <div className="social">
           {links.map(link => (
             <SocialLink key={link.type} {...link} />

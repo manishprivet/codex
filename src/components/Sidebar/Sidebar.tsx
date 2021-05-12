@@ -7,7 +7,7 @@ import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
 
 const links: SocialLinksProps[] = [
-  { type: "website", link: "https://manish.codes" },
+  { type: "website", link: "https://manishk.dev" },
   { type: "github", link: "https://github.com/manishprivet" },
   { type: "linkedin", link: "https://linkedin.com/in/manishprivet" },
   { type: "instagram", link: "https://instagram.com/manishprivet" },
@@ -36,7 +36,7 @@ const Sidebar = ({ home, changeParticlesColor }: Props) => {
       <nav className="nav-container">
         {!home && <Link to="/">Home</Link>}
         <a
-          href="https://manish.codes"
+          href="https://manishk.dev"
           target="_blank"
           rel="noreferrer noopener"
         >

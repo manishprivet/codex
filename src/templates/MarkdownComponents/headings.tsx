@@ -9,7 +9,7 @@ interface Props {
 }
 
 const convertToSlug = (s: string | undefined) =>
-  (s || "").toLowerCase().replace(/\s/g, "-");
+  (s || "").toLowerCase().replace(/[^A-Z0-9]+/ig, "-");
 
 const LinkButton = ({ id, scale }: { id: string; scale?: number }) => (
   <a className="heading-link-button" href={`#${id}`}>

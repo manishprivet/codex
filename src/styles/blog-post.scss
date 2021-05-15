@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import url('http://fonts.cdnfonts.com/css/cascadia-code');
 
 .blog-title {
   font-size: 3em;
@@ -60,7 +60,6 @@
   h5,
   h6 {
     position: relative;
-    display: flex;
     align-items: center;
     transition: var(--transition-effect);
 
@@ -106,7 +105,7 @@
   kbd,
   pre,
   samp {
-    font-family: "Fira Code", monospace;
+    font-family: "Cascadia Code", monospace;
     font-size: 1em;
   }
 
@@ -221,7 +220,7 @@
 
   p,
   pre,
-  address {
+  address, li {
     font-size: 20px;
     line-height: 1.3em;
   }
@@ -243,7 +242,8 @@
   ol,
   dl,
   dialog {
-    font-size: 14px;
+    // font-size: 14px;
+    color: var(--paragraph-color);
     line-height: 20px;
     margin-top: 18px;
     margin-bottom: 18px;
@@ -310,7 +310,7 @@
 
   ul,
   ol {
-    color: var(--text-color);
+    color: var(--paragraph-color);
   }
 
   ol {

@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap');
+
 html {
-  --text-color: #fffffe;
-  --background-color: #0f0e17;
-  --button-color: #ff8906;
-  --headline-color: #fffffe;
+  --text-color: #0e172c;
+  --background-color: #fec7d7;
+  --button-color: #f25042;
+  --headline-color: #0e172c;
   --button-text-color: #fffffe;
-  --paragraph-color: #a7a9be;
+  --paragraph-color: #0e172c;
   --sidebar-width: 300px;
   --content-width: 750px;
-  --deckgo-highlight-code-scrol: scroll;
+  --deckgo-highlight-code-scroll: scroll;
   --transition-effect: all 0.4s;
   scroll-behavior: smooth;
 
@@ -26,17 +28,12 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: var(--transition-effect);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 a {

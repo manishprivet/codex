@@ -90,7 +90,7 @@ Next up, we'll add `steps` that our job will perform. Here we've three steps, `c
       - name: Checkout
         uses: actions/checkout@v2
 ```
-> Indentions matter a lot in a yml file. So make sure that the script is correctly indented according to the final code given at the end of the article.
+> Indentations matter a lot in a yml file. So make sure that the script is correctly indented according to the final code given at the end of the article.
 
 ```yml
       - name: Push to Docker Hub

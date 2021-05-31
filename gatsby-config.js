@@ -3,9 +3,11 @@ module.exports = {
     title: `Manish's Blog`,
     description: `Hello Hello, You're Here!!! Welcome to Personal Blog! Here I share every exciting thing I learn, my experiences and some of my awesome projects as well.`,
     author: `@manishprivet`,
+    siteUrl: `https://blog.manishk.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,12 +49,16 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        icon: "src/images/profile.png",
-      },
+      resolve: `gatsby-plugin-sharp`
     },
-    `gatsby-plugin-graphql-codegen`,
+    // {
+    //   resolve: `gatsby-plugin-graphql-codegen`,
+    //   options: {
+    //     documentPaths: [
+    //       './src/**/*.{ts,tsx}',
+    //     ],
+    //   }
+    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,

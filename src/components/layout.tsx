@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../styles/layout.scss";
-import Particles, { IParticlesParams } from "react-tsparticles";
+import Particles, { RecursivePartial } from "react-tsparticles";
 
 import tsParticlesConfig from "../json/tsParticles.json";
 import Sidebar from "./Sidebar/Sidebar";
 import { Container } from "tsparticles/dist/Core/Container";
+import { IOptions } from "tsparticles/dist/Interfaces/Options/IOptions";
 
 interface Props {
   children: React.ReactNode;
@@ -13,8 +14,8 @@ interface Props {
 
 const Layout = ({ children, home }: Props) => {
   const ref = useRef<Container>(null);
-  const [particles, setParticles] = useState(
-    tsParticlesConfig as IParticlesParams
+  const [particles] = useState(
+    tsParticlesConfig as unknown as RecursivePartial<IOptions>
   );
 
   const changeParticleColor = (color: string) => {

@@ -1,5 +1,5 @@
 ---
-title: "Create a CI/CD Pipeling using Github Actions"
+title: "Create a CI/CD Pipeline using Github Actions"
 date: "2021-05-15"
 description: "Deployed a server? But updating the deployment manually is a pain, but also is managing complex CI/CD platforms like Jenkins of Spinnaker. Here we'll take a look at creating a simple CI/CD flow using Github Actions"
 ogImage: "https://ik.imagekit.io/codex/1_8VdPrEsCILorO5uHJYMUOg_JkeUc57I2.png?tr=w-1200,h-630,fo-auto"

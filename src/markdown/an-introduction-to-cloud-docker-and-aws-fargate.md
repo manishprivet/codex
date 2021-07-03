@@ -42,3 +42,5 @@ We’re here to talk about Fargate, a service provided by AWS, which lets you ru
 
 For a nodejs application, AWS Fargate proves to be a better choice by all means, as you don’t need to worry about managing any server. And if you’re just starting, the costs are also minimal at the start.
 AWS provides a 12 month free trial for its various services, but keep in mind that Fargate doesn’t come under the free trial.
+
+Thank you for reaching at the end of the post. If you liked it, please share it among your network. If you found any errors/discrepenceies, you can contact me any time on my [mail](mailto:me@manishk.dev) or fill the contact form on my [Portfolio](https://manishk.dev), and I'll get back to you.
